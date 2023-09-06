@@ -1,0 +1,196 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul,
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button,
+input[type='submit'] {
+	cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+.fullscreen {
+	min-height: 100vh;
+	width: 100vw;
+	position: relative;
+	background: url('/img/bg.png') no-repeat;
+	background-size: cover;
+}
+
+.hidden__text {
+	display: none;
+}
+.button__blue {
+	background: #3877ee;
+}
+.button__green {
+	background: #6abf4b;
+}
+.button {
+	opacity: 0.7;
+	width: 41px;
+	height: 41px;
+	position: relative;
+	border-radius: 40px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.button .cross {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 16px;
+	margin: 0 auto;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.button .cross::before,
+.button .cross::after {
+	transition: transform 0.3s;
+	content: '';
+	position: absolute;
+	top: 20px;
+	display: block;
+	width: 10px;
+	height: 2px;
+	background: #fff;
+}
+
+.button .cross::before {
+	transform: rotate(180deg);
+}
+
+.button .cross::after {
+	transform: rotate(90deg);
+}
+
+.button.active .cross::after {
+	transform: rotate(180deg);
+}
+.button.active {
+	width: 111px;
+	padding-left: 40px;
+	opacity: 1;
+}
+.button.active .hidden__text {
+	display: block;
+	color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+}
+.marker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.marker_1 {
+	top: calc(100vh - 17em - 10px);
+	left: calc(100vh - 33em - 10px);
+}
+.marker_2 {
+	top: calc(100vh - 41em);
+	left: calc(100vh - 25em - 10px);
+}
+.marker_3 {
+	top: calc(100vh - 30em);
+	left: calc(100vh - 20em - 10px);
+}
+.marker_4 {
+	top: calc(100vh - 23em);
+	left: calc(100vh + 3.5em - 10px);
+}
+.marker_5 {
+	top: calc(100vh - 12em);
+	left: calc(100vh + 7.5em + 10px);
+}
+.marker_6 {
+	top: calc(100vh - 35em);
+	left: calc(100vh + 7.5em - 10px);
+}
+.marker_7 {
+	top: calc(100vh - 21em);
+	left: calc(100vh + 18em - 20px);
+}
+.marker_8 {
+	top: calc(100vh - 47em);
+	left: calc(100vh + 23em);
+}
+
+.marker_9 {
+	top: calc(100vh - 30em);
+	left: calc(100vh + 23em);
+}
+.marker_10 {
+	top: calc(100vh - 15em);
+	left: calc(100vh + 37em);
+}
+@media (max-width: 1600px) {
+	.marker_8 {
+		left: calc(100vh + 15em);
+	}
+	.marker_10 {
+		top: calc(100vh - 20em);
+		left: calc(100vh + 23em);
+	}
+}
