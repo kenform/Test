@@ -64,19 +64,12 @@ button::-moz-focus-inner {
 	border: 0;
 }
 
-.wrapper {
+.fullscreen {
 	min-height: 100vh;
 	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-}
-.fullscreen {
-	display: flex;
 	position: relative;
-	z-index: 2;
-
-	background: url('/img/bg.png') 0 0 / cover no-repeat;
+	background: url('/img/bg.png') no-repeat;
+	background-size: cover;
 }
 
 .hidden__text {
@@ -97,7 +90,6 @@ button::-moz-focus-inner {
 	color: #fff;
 	display: flex;
 	align-items: center;
-	justify-content: start;
 }
 
 .button .cross {
@@ -193,7 +185,7 @@ button::-moz-focus-inner {
 	top: calc(100vh - 15em);
 	left: calc(100vh + 37em);
 }
-@media (max-width: 1700px) {
+@media (max-width: 1600px) {
 	.marker_8 {
 		left: calc(100vh + 15em);
 	}
